@@ -1,0 +1,775 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Adjust to move up/down */
+    right: 20px; /* Adjust to move left/right */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.whatsapp-float img {
+    width: 60px; /* Adjust size */
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff6600;
+}
+
+.navbar span {
+    color: black;
+}
+
+/* Desktop Nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+    padding: 10px;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.contact-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(45deg, #ff6600, #cc00ff);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.contact-btn:hover {
+    background: linear-gradient(45deg, #cc00ff, #ff6600);
+    transform: scale(1.05);
+}
+
+/* Responsive - Full width on small screens */
+@media (max-width: 768px) {
+    .contact-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+#problem {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+.text {
+
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.image-container img {
+    width: 100%;
+    height: 600px;
+    display: block;
+    border-radius: 15px;
+    margin:20px;
+}
+@media (max-width: 768px) {
+    /* Make text elements scale better on small screens */
+    .title {
+        font-size: 1.5em; /* Slightly smaller for better fit */
+        text-align: center; /* Center align for better readability */
+    }
+
+    .text {
+        font-size: 0.95em;
+        text-align: justify; /* Improves readability on mobile */
+        line-height: 1.5;
+    }
+
+    /* Adjust #role section */
+    #role {
+        font-family: Arial, sans-serif;
+        margin: 20px; /* Reduce margin for smaller screens */
+        text-align: center;
+    }
+
+    /* Ensure container is fully responsive */
+    .container {
+        max-width: 100%;
+        padding: 15px;
+        margin: auto;
+    }
+
+    /* Adjust headings */
+    h1 {
+        font-size: 22px; /* Reduce size for mobile */
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Ensure role section aligns properly */
+    .role-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Make buttons stack on smaller screens */
+    .role-buttons {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap instead of overflowing */
+        gap: 8px;
+        justify-content: center; /* Center buttons for better UX */
+        margin-top: 15px;
+    }
+
+    /* Improve button tap areas */
+    .role-buttons span {
+        background: #E0E0E0;
+        padding: 12px 18px; /* Slightly bigger padding for touch-friendly buttons */
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        min-width: 120px; /* Ensures buttons don’t shrink too much */
+    }
+}
+
+
+
+#role {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+    }
+    .containercha {
+        width: 100%;
+        margin: auto;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .challenge {
+        display: flex;
+        background-color: #e1e1e1;
+    
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .challenge:nth-child(even) {
+        flex-direction: row-reverse;
+    #container {
+        max-width: auto;
+        margin: auto;
+    }}
+    #OUR {
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 0px;
+    }
+    #role-section {
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: 0px;
+
+
+    }
+    #role-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    #role-buttons span {
+        background: #E0E0E0;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    #challenges {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        width: 100%;
+    }
+    .containercha {
+        
+        margin: 10px;
+        width: 100%;
+        font-size: larger;
+    }
+    h1 {
+        font-size: 40px;
+        font-size: larger;
+    }
+    .challenge {
+        display: flex;
+        
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .challenge:nth-child(even) {
+        flex-direction: row-reverse;
+        width: 100%;
+
+    }
+    .textcha {
+        flex: 1;
+        padding: 20px;
+        font-size: larger;
+    }
+    .textcha h2 {
+        color: #5A2CA0;
+    }
+    .imagecha {
+        flex: 1;
+        text-align: center;
+    }
+    .imagecha img {
+        max-width: auto;
+        border-radius: 10px;
+        height: 300px;
+    }
+    #F{
+        font-family: Arial, sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+    }
+    .container_f {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .text-section_f {
+        flex: 1;
+        min-width: 300px;
+        padding: 0px;
+        
+        margin-right:10px ;
+        width: max-content;
+        width: 100%;
+
+    }
+    .title_f {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .description_f {
+        color: #555;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        width: 100%;
+        
+    }
+    .image-section_f {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+        text-align: center;
+    }
+    .image-section_f img {
+        max-width: 100%;
+        height: auto;
+    }
+    .grid_f {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .card {
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+    }
+    .card h3 {
+        font-size: 32px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .card h4 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .card p {
+        margin-top: 10px;
+    }
+    .black {
+        background-color: black;
+    }
+    .purple {
+        background-color: #6b46c1;
+    }
+    .gray {
+        background-color: #e2e8f0;
+        color: black;
+    }
+    .gray h3 {
+        color: #4a5568;
+    }
+    .gray p {
+        color: #4a5568;
+    }
+    @media (max-width: 768px) {
+        /* Stack elements vertically on mobile */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 15px; /* Add spacing for better UX */
+        }
+    
+        /* Ensure text and image sections take full width */
+        .text-section, 
+        .image-section {
+            width: 100%;
+            max-width: 100%;
+            padding: 10px; /* Adds spacing between sections */
+        }
+    
+        /* Improve text readability */
+        .description {
+            max-width: 100%;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 15px; /* Adds spacing for better flow */
+        }
+    
+        /* Ensure images scale properly */
+        .image-section img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-width: 400px; /* Prevents excessive stretching */
+        }
+    }
+    
+    #G {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f4f8;
+        padding: 20px;
+        margin: 0;
+    }
+    .slider-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        gap: 10px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 10px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-padding: 0 10%;
+    }
+    .slider-container::-webkit-scrollbar {
+        display: none;
+    }
+    .testimonial {
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        min-width: 80%;
+        box-sizing: border-box;
+        background-color: rgb(240, 229, 251);
+        border-radius: 20px;
+        border-style:solid ;
+        border-width: 2px;
+        border-color: rgb(195, 140, 246);
+    }
+    .stars {
+        color: gold;
+    }
+    .dots {
+        margin-top: 15px;
+    }
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: gray;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .dot.active {
+        background-color: black;
+    }
+    @media (max-width: 768px) {
+        .testimonial {
+            padding: 20px; /* Slightly increased for better spacing */
+            text-align: center; /* Center-align text for better UX */
+            font-size: 1rem; /* Ensures readability */
+            line-height: 1.5; /* Improves spacing between lines */
+            max-width: 90%; /* Prevents stretching */
+            margin: auto; /* Centers content */
+        }
+    
+        /* Ensure images inside testimonials scale properly */
+        .testimonial img {
+            width: 80px; /* Adjust image size for avatars */
+            height: 80px;
+            border-radius: 50%; /* Makes images circular */
+            margin-bottom: 10px;
+        }
+    }
+    
+    #H{
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+    .container_h {
+        width: 100%;
+        margin: auto;
+    }
+    #head {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .stories {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+    .story {
+        position: relative;
+        width: 50%;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .story img {
+        width: 100%;
+        height: 500px;
+        display: block;
+    }
+    .story .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 15px;
+        font-size: 16px;
+        text-align: left;
+    }
+    .case-content {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+    .case-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .case-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    .case-image {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    /* Tablet screens (≤ 768px) */
+@media (max-width: 768px) {
+    .case-title {
+        font-size: 1.5rem;
+        text-align: center; /* Centering for better readability */
+        margin-bottom: 10px; /* Adds spacing below */
+    }
+
+    .case-description {
+        font-size: 1rem;
+        line-height: 1.5; /* Improves text readability */
+        text-align: center;
+        padding: 0 15px; /* Adds slight padding for better mobile layout */
+    }
+}
+
+/* Small mobile screens (≤ 480px) */
+@media (max-width: 480px) {
+    .case-title {
+        font-size: 1.2rem;
+        font-weight: bold; /* Increases readability */
+        margin-bottom: 8px;
+    }
+
+    .case-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+/* Footer General Styles */
+footer {
+    background: linear-gradient(180deg, #2d0060, #360173);
+    color: white;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Countries Section */
+.countries {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer Main Container */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Main Footer Content */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Left Section */
+.footer-left {
+    max-width: 250px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.certifications img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff20;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-icon i {
+    color: white;
+}
+
+.social-icon:hover {
+    background: #ffcc00;
+    transform: scale(1.1);
+}
+
+.social-icon:hover i {
+    color: #2d0060;
+}
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links div {
+    min-width: 150px;
+}
+
+.footer-links h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Contact Section */
+.footer-contact {
+    max-width: 250px;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+.footer-bottom b {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-icon{
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links div {
+        margin-bottom: 15px;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+}
