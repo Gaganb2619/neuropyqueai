@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </head>
 <body>
     <nav class="navbar">
@@ -20,11 +23,9 @@
             <div class="logo">Neurophyque <span>AI</span> Solutions</div>
         </a>
     
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" style="display: none;">
             ☰
         </div>
-       
-    
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="#offerings">Offerings</a></li>
@@ -33,7 +34,7 @@
             <li><a href="#partners">Partners</a></li>
             <li><a href="about.html">Company</a></li>
             <li><a href="work.html">Work</a></li>
-            <div class="close-icon" id="closeIcon" onclick="toggleMenu()" style="display: none;">
+            <div class="close-icon" id="closeIcon" onclick="toggleMenu()">
                 ✖
             </div>
         </ul>
