@@ -27,103 +27,85 @@ body {
 .whatsapp-float img:hover {
     transform: scale(1.1);
 }
-
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background: #fffdfd;
+    color: #c42303;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-.navbar .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #ff6600;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
 }
 
-.navbar span {
-    color: black;
+.logo span {
+    color: #00ffaa;
 }
 
-/* Desktop Nav */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
+.nav-links li a {
     text-decoration: none;
-    color: black;
-    font-weight: 500;
+    color: rgb(0, 0, 0);
 }
 
-/* Mobile Menu */
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: white;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-menu a {
-    padding: 10px;
-    display: block;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
 .contact-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    background: linear-gradient(45deg, #ff6600, #cc00ff);
+    padding: 10px 19px;
+    background: #ee9403;
     border: none;
-    border-radius: 30px;
+    color: black;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Hover effect */
-.contact-btn:hover {
-    background: linear-gradient(45deg, #cc00ff, #ff6600);
-    transform: scale(1.05);
+.hamburger,
+.close-icon {
+    font-size: 24px;
+    /* display: none; */
+    cursor: pointer;
+    user-select: none;
 }
 
-/* Responsive - Full width on small screens */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .contact-btn {
+    .hamburger,
+    .close-icon {
         display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction:column;
         width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        border:2px;
+        cursor: pointer;
+        background-color: #ecdddd;
+        padding: 20px;
         text-align: center;
-        padding: 14px;
-        font-size: 16px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .contact-btn {
+        margin-top: 10px;
     }
 }
-
 
 
 /* Hero Section */

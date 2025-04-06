@@ -1,3 +1,24 @@
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    const hamburger = document.getElementById("hamburger");
+    const closeIcon = document.getElementById("closeIcon");
+
+    nav.classList.toggle("show");
+
+    if (nav.classList.contains("show")) {
+        hamburger.style.display = "none";
+        closeIcon.style.display = "block";
+    } else {
+        hamburger.style.display = "block";
+        closeIcon.style.display = "none";
+    }
+}
+
+
+
+
+
+
 const carouselInner = document.querySelector('.carousel-inner');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');

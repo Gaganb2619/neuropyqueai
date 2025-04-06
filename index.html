@@ -18,20 +18,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
-        <a href="index.html" style="text-decoration: none;"><div class="logo" style="cursor: pointer;">Neurophyque <span>AI</span> Solutions</div></a> 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#offerings">Offerings</a></li>
-            <li><a href="#staffing">Staffing</a></li>
-            <li><a href="#ai">AI Agents</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="about.html">Company</a></li>
-            <li><a href="work.html">Work</a></li>
-        </ul>
-        <button class="contact-btn" onclick="window.location.href='tel:+919980024685'">Contact Us</button>
-    </nav>
+    <a href="index.html" style="text-decoration: none;">
+        <div class="logo">Neurophyque <span>AI</span> Solutions</div>
+    </a>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+   
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#staffing">Staffing</a></li>
+        <li><a href="#ai">AI Agents</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="about.html">Company</a></li>
+        <li><a href="work.html">Work</a></li>
+        <div class="close-icon" id="closeIcon" onclick="toggleMenu()" style="display: none;">
+            ✖
+        </div>
+    </ul>
+
+    <button class="contact-btn" onclick="window.location.href='tel:+919980024685'">Contact Us</button>
+</nav>
 
     <!-- Hero Section -->
     <header class="hero">
